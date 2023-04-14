@@ -49,12 +49,10 @@ const loadQuiz = async () => {
     const data = await res.json();
     quizData = data;
     displayQuiz(data);
-    // console.log(data)
 };
 
 // Displaying quiz on quiz page
 const displayQuiz = (data) => {
-  // console.log(data)
     if (!data) {
         quizContainer.innerHTML = "";
         return;
@@ -77,7 +75,6 @@ const displayQuiz = (data) => {
 
 // EventListener for quiz submit button
 document.querySelector("#submit").addEventListener("click", () => {
-  // console.log("clicked")
     if (answers.length < 6) {
         return;
     }
@@ -112,8 +109,6 @@ document.querySelector("#submit").addEventListener("click", () => {
 
     // data setting on local storage and getting data from local storage
     let storage = JSON.parse(localStorage.getItem("results"));
-    // let storage = localStorage.getItem("results");
-    console.log(storage);
     if (storage) {
         localStorage.setItem(
             "results",
