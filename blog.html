@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>Quiz Hero</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="./index.js" defer></script>
+
+        <!-- You don't need to change noChange.js file. It's fine -->
+        <script src="./noChange.js" defer></script>
+        <!-- You don't need to change noChange.js file. It's fine -->
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            common: ["Rubik", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body class="bg-white font-common">
+        <!-- Header/Navbar section start -->
+        <header class="h-16 flex items-center shadow-sm">
+            <nav class="flex justify-between items-center w-9/12 mx-auto">
+                <div class="text-zinc-800 font-bold uppercase">
+                    <h1 class="text-lg">
+                        Quiz <span class="text-green-700">HERO</span>
+                    </h1>
+                    <p class="text-[10px] font-normal capitalize -mt-1">
+                        Get ready to Quiz and be amazed!
+                    </p>
+                </div>
+                <button
+                    class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white"
+                >
+                    <a href="./index.html">Home</a>
+                </button>
+            </nav>
+        </header>
+        <!-- Header/Navbar section end -->
+
+        <!-- Ansering Questions -->
+        <section class="container mx-auto">
+            <div class="m-5">
+                <h1 class="text-3xl">
+                    what is the difference between map filter foreach and find?
+                </h1>
+                <p>
+                    In JavaScript, map(), filter(), forEach() and find() are all
+                    array methods that allow you to iterate over an array and
+                    perform some operation on each element. The main difference
+                    between these methods is what they return.
+                    <li>
+                        map() returns a new array with the transformed elements.
+                        It does not change the original array.
+                    </li>
+                    <li>
+                        filter() returns a new array with all elements that pass
+                        the test implemented by the provided function.
+                    </li>
+                    <li>
+                        forEach() does not return anything. It just executes a
+                        provided function once for each array element.
+                    </li>
+                    <li>
+                        find() returns the value of the first element in an
+                        array that satisfies a provided testing function.
+                    </li>
+                </p>
+            </div>
+            <div class="m-5">
+                <h1 class="text-3xl">
+                    what is the difference between localstorage sessionstorage
+                    and cookies?
+                </h1>
+                <p>
+                    In web development, localStorage, sessionStorage, and
+                    cookies are all ways to store data on the client-side. The
+                    main differences between them are:
+
+                    <li>
+                        Local storage is useful for storing data that the user
+                        will need to access later, such as offline data.The
+                        stored data is not deleted when the browser is
+                        closed.This is especially useful for storing data that
+                        you want to persist even if the user closes the browser,
+                        such as preferences or settings.
+                    </li>
+                    <li>
+                        Session storage is a great way to improve the
+                        performance of your web applications.The data is stored
+                        only for the session and will be deleted when the
+                        browser is closed.Session storage is useful for storing
+                        data that is sensitive, such as login credentials.
+                    </li>
+                    <li>
+                        Cookies are a good choice for storing data that should
+                        not be persisted for a long time, such as session
+                        IDs.The data can be set to expire at a certain
+                        time.Cookies are often used to store data that is not
+                        sensitive, such as user preferences
+                    </li>
+                </p>
+            </div>
+            <div class="m-5">
+                <h1 class="text-3xl">what is event loop how it works?</h1>
+                <p>
+                    JavaScript has a runtime model based on an event loop, which
+                    is responsible for executing the code, collecting and
+                    processing events, and executing queued sub-tasks. In
+                    JavaScript, the event loop is a mechanism that allows
+                    asynchronous code to run in a single-threaded environment.
+                    The event loop continuously checks if there are any tasks in
+                    the task queue. If there are any tasks, it will push them
+                    onto the call stack for execution. Once the call stack is
+                    empty, the event loop will check the task queue again for
+                    new tasks. The event loop is responsible for executing code
+                    in a non-blocking way. This means that while one piece of
+                    code is executing, other code can still be executed at the
+                    same time. This is what allows JavaScript to handle multiple
+                    requests at once without blocking.
+                </p>
+            </div>
+        </section>
+        <section class="container mx-auto my-5">
+            <div class="m-5">
+                <h1 class="text-3xl">Explaining the quizTimer Function</h1>
+                <p>
+                    This quizTimer function checking how many time consuming to
+                    answering the questions. We know the setInterval() method
+                    continues calling the function until clearInterval() is
+                    called, or the window is closed. Here when the quiz is start
+                    it call the setInterval function and when we submit the
+                    answer it called the clearInterval function.
+                </p>
+            </div>
+            <div class="m-5">
+                <h1 class="text-3xl">Explaining the chooseQuiz Function</h1>
+                <p>
+                    The chooseQuiz function takes the quiz answers what we are
+                    giveing. And store them in an array. And checking that the
+                    given answer is Correct or not.
+                </p>
+            </div>
+        </section>
+        <!-- Ansering Questions -->
+
+        <!-- Footer section start -->
+        <footer class="py-10 text-center text-sm">
+            Copyright © 2023 Quiz Hero All Rights Reserved.
+        </footer>
+        <!-- Footer section end -->
+    </body>
+</html>
